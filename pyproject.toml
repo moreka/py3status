@@ -38,6 +38,14 @@ dbus = [
     "PyGObject==3.46.0",
 ]
 udev = ["pyudev >= 0.21.0"]
+test = [ "pytest" ]
+lint = [ "ruff", "black", "isort" ]
+dev = [ "pytest", "ruff", "black", "isort" ]
+docs = [
+    "mkdocs-material>=9.4.5",
+    "Pillow>=3.4.2",
+    "fonttools==4.24.4",
+]
 
 [project.urls]
 Download = "https://github.com/ultrabug/py3status/tags"

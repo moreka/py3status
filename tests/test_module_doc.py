@@ -12,7 +12,6 @@ Specific modules/config parameters are excluded but this should be discouraged.
 
 import ast
 import re
-
 from collections import OrderedDict
 from pathlib import Path
 
@@ -122,8 +121,7 @@ def get_module_attributes(path):
             else:
                 if class_name == "Dict":
                     attr_value = {
-                        get_value(k): get_value(v)
-                        for k, v in zip(value.keys, value.values)
+                        get_value(k): get_value(v) for k, v in zip(value.keys, value.values)
                     }
                 elif class_name == "List":
                     attr_value = [get_value(e) for e in value.elts]
@@ -203,7 +201,7 @@ def _gen_diff(source, target, source_label="Source", target_label="Target"):
         padding + ("-" * (2 * max_elem_len + len(middle_orig) + 2)),
     ]
 
-    for (have, want) in zip(source, target):
+    for have, want in zip(source, target):
         # Determine the mark
         middle = middle_orig
 

@@ -2,7 +2,6 @@ from pprint import pformat
 
 from py3status.py3 import Py3
 
-
 py3 = Py3()
 
 

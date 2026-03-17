@@ -1,5 +1,5 @@
-from py3status.module_test import MockPy3statusWrapper
 from py3status.module import Module
+from py3status.module_test import MockPy3statusWrapper
 
 
 class TestModule:

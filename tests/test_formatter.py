@@ -3,7 +3,6 @@ Run formatter tests
 """
 
 import platform
-
 from pprint import pformat
 
 import pytest
@@ -204,9 +203,7 @@ def test_8():
 
 
 def test_9():
-    run_formatter(
-        {"format": "{missing} {name} {number}", "expected": "{missing} Björk 42"}
-    )
+    run_formatter({"format": "{missing} {name} {number}", "expected": "{missing} Björk 42"})
 
 
 def test_10():
@@ -262,9 +259,7 @@ def test_20():
 
 
 def test_21():
-    run_formatter(
-        {"format": "zero [one [two [three [no]]]]|Numbers", "expected": "Numbers"}
-    )
+    run_formatter({"format": "zero [one [two [three [no]]]]|Numbers", "expected": "Numbers"})
 
 
 def test_22():
@@ -277,9 +272,7 @@ def test_22():
 
 
 def test_23():
-    run_formatter(
-        {"format": "zero [one [two [three [{no}]]]]|Numbers", "expected": "Numbers"}
-    )
+    run_formatter({"format": "zero [one [two [three [{no}]]]]|Numbers", "expected": "Numbers"})
 
 
 # zero/False/None etc
@@ -361,9 +354,7 @@ def test_39():
 
 
 def test_40():
-    run_formatter(
-        {"format": "Hello {python2_unicode}! ☂", "expected": "Hello Björk! ☂"}
-    )
+    run_formatter({"format": "Hello {python2_unicode}! ☂", "expected": "Hello Björk! ☂"})
 
 
 def test_41():
@@ -407,9 +398,7 @@ def test_49():
 
 
 def test_50():
-    run_formatter(
-        {"format": "{long_str}", "expected": "I am a long string though not too long"}
-    )
+    run_formatter({"format": "{long_str}", "expected": "I am a long string though not too long"})
 
 
 def test_51():
@@ -440,9 +429,7 @@ def test_56():
 
 
 def test_57():
-    run_formatter(
-        {"format": r"Hello [{missing}|[\?show Anon]]!", "expected": "Hello Anon!"}
-    )
+    run_formatter({"format": r"Hello [{missing}|[\?show Anon]]!", "expected": "Hello Anon!"})
 
 
 def test_58():
@@ -486,15 +473,11 @@ def test_65():
 
 
 def test_66():
-    run_formatter(
-        {"format": r"[\?max_length=10 Hello {name} {number}]", "expected": "Hello Björ"}
-    )
+    run_formatter({"format": r"[\?max_length=10 Hello {name} {number}]", "expected": "Hello Björ"})
 
 
 def test_67():
-    run_formatter(
-        {"format": r"\?max_length=9 Hello {name} {number}", "expected": "Hello Bjö"}
-    )
+    run_formatter({"format": r"\?max_length=9 Hello {name} {number}", "expected": "Hello Bjö"})
 
 
 def test_68():
@@ -601,9 +584,7 @@ def test_else_true():
 
 
 def test_else_false():
-    run_formatter(
-        {"format": r"[\?if=no Hello|Goodbye|Something else]", "expected": "Goodbye"}
-    )
+    run_formatter({"format": r"[\?if=no Hello|Goodbye|Something else]", "expected": "Goodbye"})
 
 
 def test_composite_looks_empty():
@@ -944,9 +925,7 @@ def test_composite_5():
 
 
 def test_composite_6():
-    run_formatter(
-        {"format": "hello", "expected": [{"full_text": "hello"}], "composite": True}
-    )
+    run_formatter({"format": "hello", "expected": [{"full_text": "hello"}], "composite": True})
 
 
 def test_attr_getter():
@@ -1065,9 +1044,7 @@ def test_not_zero_9():
 
 
 def test_not_zero_10():
-    run_formatter(
-        {"format": r"[\?not_zero {zero} {str_nan}]", "expected": "0 I'm not a number"}
-    )
+    run_formatter({"format": r"[\?not_zero {zero} {str_nan}]", "expected": "0 I'm not a number"})
 
 
 def test_not_zero_11():
@@ -1095,9 +1072,7 @@ def test_soft_4():
 
 
 def test_soft_5():
-    run_formatter(
-        {"format": r"{number}[\?soft  {name} ]{number}", "expected": "42 Björk 42"}
-    )
+    run_formatter({"format": r"{number}[\?soft  {name} ]{number}", "expected": "42 Björk 42"})
 
 
 def test_soft_6():
@@ -1211,9 +1186,7 @@ def test_conditions_9():
 
 
 def test_conditions_10():
-    run_formatter(
-        {"format": r"\?if=pi=3.14159265359 cool beans", "expected": "cool beans"}
-    )
+    run_formatter({"format": r"\?if=pi=3.14159265359 cool beans", "expected": "cool beans"})
 
 
 def test_conditions_11():
@@ -1287,9 +1260,7 @@ def test_trailing_zeroes_2():
 
 
 def test_ceiling_numbers_1():
-    run_formatter(
-        {"format": "{pi} becomes {pi:ceil}", "expected": "3.14159265359 becomes 4"}
-    )
+    run_formatter({"format": "{pi} becomes {pi:ceil}", "expected": "3.14159265359 becomes 4"})
 
 
 def test_ceiling_numbers_2():
@@ -1348,9 +1319,7 @@ def test_placeholders_5():
 
 
 def test_update_placeholders_1():
-    update_placeholders(
-        {"format": "{placeholder}", "updates": {}, "expected": "{placeholder}"}
-    )
+    update_placeholders({"format": "{placeholder}", "updates": {}, "expected": "{placeholder}"})
 
 
 def test_update_placeholders_2():

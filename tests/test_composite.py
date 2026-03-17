@@ -1,6 +1,5 @@
 from py3status.composite import Composite
 
-
 # Composite initialize
 
 
